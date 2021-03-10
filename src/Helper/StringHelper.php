@@ -29,7 +29,7 @@ class StringHelper
                 }
             }
         } else {
-            $value = implode(':', $arguments);
+            $value = md5(serialize($arguments));
         }
 
         return $prefix . ':' . $value;
